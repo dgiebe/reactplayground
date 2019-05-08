@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-class Spinner extends Component {
-  render() {
-    return (
-      <div className="ui active dimmer">
-        <div className="ui big text loader">
-          Please allow to use your location...
-        </div>
-      </div>
-    );
-  }
-}
+const Spinner = props => {
+  return (
+    <div className="ui active dimmer">
+      <div className="ui big text loader">{props.message}</div>
+    </div>
+  );
+};
+
+Spinner.defaultProps = {
+  message: "Loading"
+};
 
 export default Spinner;
